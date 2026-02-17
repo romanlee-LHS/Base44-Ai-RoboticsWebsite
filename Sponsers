@@ -1,0 +1,77 @@
+{
+  "name": "Sponsor",
+  "type": "object",
+  "properties": {
+    "company_name": {
+      "type": "string",
+      "description": "Name of the sponsoring company or organization"
+    },
+    "contact_name": {
+      "type": "string",
+      "description": "Primary contact person"
+    },
+    "contact_email": {
+      "type": "string",
+      "format": "email",
+      "description": "Contact email address"
+    },
+    "contact_phone": {
+      "type": "string",
+      "description": "Contact phone number"
+    },
+    "sponsorship_level": {
+      "type": "string",
+      "enum": [
+        "Bronze",
+        "Silver",
+        "Gold",
+        "Platinum"
+      ],
+      "description": "Level of sponsorship"
+    },
+    "amount": {
+      "type": "number",
+      "description": "Sponsorship amount in dollars"
+    },
+    "commitment_start_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Start date of sponsorship commitment"
+    },
+    "commitment_end_date": {
+      "type": "string",
+      "format": "date",
+      "description": "End date of sponsorship commitment"
+    },
+    "logo_url": {
+      "type": "string",
+      "description": "URL to sponsor logo image"
+    },
+    "website": {
+      "type": "string",
+      "description": "Sponsor website URL"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional notes about the sponsor"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Active",
+        "Pending",
+        "Expired"
+      ],
+      "default": "Active",
+      "description": "Current status of the sponsorship"
+    }
+  },
+  "required": [
+    "company_name",
+    "contact_email",
+    "sponsorship_level",
+    "amount",
+    "commitment_start_date",
+    "commitment_end_date"
+  ]
+}

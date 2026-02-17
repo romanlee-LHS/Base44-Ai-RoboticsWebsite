@@ -1,0 +1,26 @@
+{
+  "name": "Competition",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the competition"
+    },
+    "year": {
+      "type": "number",
+      "description": "Year of the competition"
+    },
+    "award_won": {
+      "type": "string",
+      "description": "Award won at the competition"
+    },
+    "description": {
+      "type": "string",
+      "description": "Details about the competition"
+    }
+  },
+  "required": [
+    "name",
+    "year"
+  ]
+}

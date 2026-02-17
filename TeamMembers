@@ -1,0 +1,74 @@
+{
+  "name": "TeamMember",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Full name of the team member"
+    },
+    "role": {
+      "type": "string",
+      "enum": [
+        "Head Mentor",
+        "Mentor",
+        "Team Captain",
+        "Co-Captain",
+        "Lead Programmer",
+        "Lead Builder",
+        "Programmer",
+        "Builder",
+        "CAD Designer",
+        "Driver",
+        "Scout",
+        "Outreach Lead",
+        "Member"
+      ],
+      "description": "Role on the team"
+    },
+    "grade": {
+      "type": "number",
+      "description": "Current grade level"
+    },
+    "photo_url": {
+      "type": "string",
+      "description": "Profile photo URL"
+    },
+    "bio": {
+      "type": "string",
+      "description": "Short biography"
+    },
+    "specialties": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Areas of expertise"
+    },
+    "years_on_team": {
+      "type": "number",
+      "description": "Number of years on the team"
+    }
+  },
+  "required": [
+    "name",
+    "role"
+  ],
+  "rls": {
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "read": {},
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}
